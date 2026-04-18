@@ -17,6 +17,11 @@ Code review skill based on Rob Pike's 19 Go Proverbs (<https://go-proverbs.githu
 
 Reviews run as a **parallel fan-out of subagents**, one per actionable proverb. This keeps the main context small and each check focused on a single principle.
 
+> [!IMPORTANT]
+> **Before any subagent fan-out**, ASK the user which model to use for the per-proverb subagents: `opus` (highest quality, slowest), `sonnet` (balanced), or `haiku` (cheapest, fastest). Wait for their answer — do not pick for them. Pass the chosen model name to every dispatched subagent via the Task tool's `model` parameter.
+>
+> Skip this step only for the *Single-proverb question* flow below — it loads one file directly in the main thread, no subagents.
+
 ### Full review
 
 1. Identify the Go files in scope and hold only their paths in the main thread.
