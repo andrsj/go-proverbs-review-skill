@@ -18,7 +18,9 @@ Inside any Claude Code session, run:
 /reload-plugins
 ```
 
-The plugin is registered globally (user scope by default), available in every project. The skill appears namespaced as `/go-proverbs-review:review`. Updates flow automatically when you run `/plugin marketplace update andrsj-skills`.
+The plugin is registered globally (user scope by default), available in every project. The skill appears namespaced as `/go-proverbs-review:review`.
+
+To pull updates, run `/plugin marketplace update andrsj-skills` + `/reload-plugins`. Claude Code only re-fetches plugin code when `plugin.json`'s `version` field has increased — so `marketplace update` only re-pulls on a version bump, not on every repo commit. To force a refresh regardless of version, uninstall and reinstall.
 
 ### Option 2 — `--plugin-dir` (for development / live-edit)
 
