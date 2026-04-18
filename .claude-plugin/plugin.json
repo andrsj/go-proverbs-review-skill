@@ -1,0 +1,22 @@
+{
+  "name": "go-proverbs-review",
+  "description": "A Claude Code skill for reviewing Go code against Rob Pike's 19 Go Proverbs. Each proverb is its own rule file with motivation, code smells, good/bad examples, and primary sources. At review time, one subagent per actionable proverb runs in parallel, so each check is focused on a single principle and the main context stays small.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Andrii Derkach"
+  },
+  "homepage": "https://github.com/andrsj/go-proverbs-review-skill",
+  "repository": "https://github.com/andrsj/go-proverbs-review-skill",
+  "license": "MIT",
+  "keywords": [
+    "go",
+    "golang",
+    "go-proverbs",
+    "rob-pike",
+    "code-review",
+    "linting",
+    "claude-code",
+    "skills",
+    "review"
+  ]
+}

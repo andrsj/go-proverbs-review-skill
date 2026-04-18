@@ -1,6 +1,6 @@
 ---
-name: go-proverbs-review
-description: Use when reviewing Go code against Rob Pike's Go Proverbs. Activates on explicit request ("review with Go proverbs", "/go-proverbs-review") or whenever the user asks to review `.go` files. Flags violations and groups findings by proverb, each tied to a detailed rule file in `proverbs/`.
+name: review
+description: Use when reviewing Go code against Rob Pike's Go Proverbs. Activates on explicit request ("review with Go proverbs", "/go-proverbs-review:review") or whenever the user asks to review `.go` files. Flags violations and groups findings by proverb, each tied to a detailed rule file in `proverbs/`.
 ---
 
 # Go Proverbs Review
@@ -9,7 +9,7 @@ Code review skill based on Rob Pike's 19 Go Proverbs (<https://go-proverbs.githu
 
 ## When to use
 
-- User explicitly asks for a "Go proverbs review" or types `/go-proverbs-review`
+- User explicitly asks for a "Go proverbs review" or types `/go-proverbs-review:review`
 - User asks to review Go (`.go`) code — apply all `actionable` proverbs
 - User asks about a specific proverb — load the matching file directly
 

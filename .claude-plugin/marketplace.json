@@ -1,0 +1,16 @@
+{
+  "name": "andrsj-skills",
+  "owner": {
+    "name": "Andrii Derkach"
+  },
+  "metadata": {
+    "description": "Claude Code skill plugins by Andrii Derkach"
+  },
+  "plugins": [
+    {
+      "name": "go-proverbs-review",
+      "source": "./",
+      "description": "A skill for reviewing Go code against Rob Pike's 19 Go Proverbs. Runs as a parallel fan-out of subagents, one per actionable proverb. Activates on explicit request or whenever the user asks to review .go files."
+    }
+  ]
+}
